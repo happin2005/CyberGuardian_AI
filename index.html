@@ -1,193 +1,30 @@
 <!DOCTYPE html>
-<!-- saved from url=(0091)https://cdpn.io/cpe/boomboom/index.html?key=index.html-094a1556-fde1-27ed-a6d9-b571095cf6a6 -->
-<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<body>
   
-  <title>CodePen Demo</title>
-
-  <meta name="robots" content="noindex">
-
-  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
-  <link rel="canonical" href="https://codepen.io/pen/">
-
-  
-  
-
-  <style id="INLINE_PEN_STYLESHEET_ID">
-    /* DARK THEME AND RESPONSIVE STYLES */
-body {
-  margin: 0;
-  padding: 0;
-  background: #0d0d0d;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  background: #1a1a1a;
-  border-bottom: 2px solid #333;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  background: #111;
-  padding: 10px;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-nav button {
-  padding: 10px 15px;
-  background: #222;
-  border: 1px solid #444;
-  color: white;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-nav button:hover {
-  background: #333;
-  transform: scale(1.05);
-}
-
-.page {
-  display: none;
-  padding: 20px;
-  animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-
-textarea, input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 6px;
-  background: #111;
-  border: 1px solid #444;
-  color: white;
-}
-
-button {
-  padding: 10px 15px;
-  margin-top: 10px;
-  background: #444;
-  border: none;
-  cursor: pointer;
-  color: white;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #666;
-  transform: scale(1.03);
-}
-
-#messageResult, #aiMessageAnalysis, #messageRiskScore,
-#passwordResult, #pwSuggestions, #reportOutput, #safetyScore, #safetyBadge {
-  margin-top: 15px;
-  padding: 15px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 6px;
-}
-
-.ai-analysis {
-  margin-top: 10px;
-  padding: 10px;
-  border-left: 4px solid #4aa3ff;
-}
-
-.risk-score {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.pw-meter {
-  width: 100%;
-  background: #222;
-  height: 15px;
-  border-radius: 6px;
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-#pwMeterBar {
-  height: 100%;
-  width: 0%;
-  background: #4aa3ff;
-  border-radius: 6px;
-  transition: width 0.5s, background 0.5s;
-}
-
-canvas {
-  margin-top: 15px;
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 6px;
-}
-
-#tipsList {
-  list-style: none;
-  padding: 0;
-}
-
-#tipsList li {
-  margin: 10px 0;
-}
-
-#tipsList input {
-  margin-right: 10px;
-}
-
-#safetyBadge {
-  margin-top: 10px;
-  padding: 10px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 6px;
-  color: #111;
-  background: #4aa3ff;
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-  </style>
-
-  
-<script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
-<script src="./iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js.download"></script>
-<script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
-<script src="./iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js.download"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberGuardian AI - National Level</title>
+  <link rel="stylesheet" href="stylus.css">
 </head>
 
 <body>
-  <header>
+
+<header>
   <h1>⚡ CyberGuardian AI</h1>
   <p>Your Personal Cyber Safety Companion</p>
 </header>
 
 <nav>
-  <button onclick="showPage(&#39;msgChecker&#39;)">Message Checker</button>
-  <button onclick="showPage(&#39;passwordChecker&#39;)">Password Checker</button>
-  <button onclick="showPage(&#39;reportDex&#39;)">Phone Safety Report</button>
-  <button onclick="showPage(&#39;securitySteps&#39;)">Safety Tips</button>
+  <button onclick="showPage('msgChecker')">Message Checker</button>
+  <button onclick="showPage('passwordChecker')">Password Checker</button>
+  <button onclick="showPage('reportDex')">Phone Safety Report</button>
+  <button onclick="showPage('securitySteps')">Safety Tips</button>
 </nav>
 
-<!-- MESSAGE CHECKER -->
+<!-- =======================
+     MESSAGE CHECKER
+======================== -->
 <section id="msgChecker" class="page">
   <h2>Message Safety Checker</h2>
   <textarea id="messageInput" placeholder="Paste suspicious message here..."></textarea>
@@ -197,7 +34,9 @@ canvas {
   <div id="messageRiskScore" class="risk-score"></div>
 </section>
 
-<!-- PASSWORD CHECKER -->
+<!-- =======================
+     PASSWORD CHECKER
+======================== -->
 <section id="passwordChecker" class="page">
   <h2>Password Strength Checker</h2>
   <input type="text" id="passwordInput" placeholder="Enter your password">
@@ -210,7 +49,9 @@ canvas {
   <div id="pwSuggestions"></div>
 </section>
 
-<!-- PHONE SAFETY REPORT -->
+<!-- =======================
+     PHONE SAFETY REPORT
+======================== -->
 <section id="reportDex" class="page">
   <h2>Phone Safety Report</h2>
   <button id="runScanBtn">Run Phone Scan</button>
@@ -219,13 +60,15 @@ canvas {
   <canvas id="reportChart" width="400" height="200"></canvas>
 </section>
 
-<!-- SAFETY TIPS -->
+<!-- =======================
+     SAFETY TIPS
+======================== -->
 <section id="securitySteps" class="page">
   <h2>Cyber Safety Tips for Teenagers</h2>
   <ul id="tipsList">
     <li><input type="checkbox"> Never share OTP or passwords</li>
     <li><input type="checkbox"> Do not click unknown links</li>
-    <li><input type="checkbox"> Use strong passwords with symbols &amp; numbers</li>
+    <li><input type="checkbox"> Use strong passwords with symbols & numbers</li>
     <li><input type="checkbox"> Never talk to strangers online</li>
     <li><input type="checkbox"> Turn on 2-step verification</li>
     <li><input type="checkbox"> Avoid installing apps outside Play Store/App Store</li>
@@ -236,11 +79,6 @@ canvas {
   <div id="safetyBadge"></div>
 </section>
 
-<script src="./app.js.download"></script>
-
-
-  
-  <script src="./pen.js.download" crossorigin=""></script>
-
-
-</body></html>
+<script src="app.js"></script>
+</body>
+</html>
